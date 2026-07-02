@@ -1,0 +1,9 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<entry>
+		<resource>
+			<Provenance>
+				<recorded value="2022-10-04T11:03:48.472"/>
+			</Provenance>
+		</resource>
+	</entry>
+</Bundle>
