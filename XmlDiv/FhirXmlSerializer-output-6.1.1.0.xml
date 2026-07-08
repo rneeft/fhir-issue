@@ -1,0 +1,110 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="872e7e38-6acd-4d54-9b1b-f8c4c9871587" />
+    <type value="transaction" />
+    <entry>
+        <fullUrl value="urn:uuid:bb0f328b-9633-4a0d-bc17-38b614d8894e" />
+        <resource>
+            <Consent>
+                <id value="bb0f328b-9633-4a0d-bc17-38b614d8894e" />
+                <meta>
+                    <profile
+                        value="http://someprofileidentifier.example.com/fhir/StructureDefinition/Consent-Notify|1.0.0" />
+                </meta>
+                <text><status value="generated" />Some text that should be wrapped in a div element
+                    in the XML output.</text>
+                <extension url="http://fhir.nl/StructureDefinition/ProviderCategory">
+                    <valueCodeableConcept>
+                        <coding>
+                            <system value="http://fhir.nl/example/CodeSystem/RZC" />
+                            <version value="SOMEVERSION" />
+                            <code value="HH001" />
+                            <display value="HH TEXT" />
+                        </coding>
+                    </valueCodeableConcept>
+                </extension>
+                <status value="active" />
+                <scope>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/consentscope" />
+                        <version value="SOMEVERSION" />
+                        <code value="patient-privacy" />
+                    </coding>
+                </scope>
+                <category>
+                    <coding>
+                        <system value="http://fhir.nl/example/CodeSystem/GC" />
+                        <version value="SOMEVERSION" />
+                        <code value="GC001" />
+                        <display value="GC TEXT" />
+                    </coding>
+                </category>
+                <patient>
+                    <reference value="urn:uuid:4d4c0bb4-82f4-4160-9399-cdde6500baad" />
+                </patient>
+                <dateTime value="2026-07-08T08:52:53.4345288Z" />
+                <provision>
+                    <type value="permit" />
+                    <actor>
+                        <role>
+                            <coding>
+                                <system
+                                    value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType" />
+                                <code value="CST" />
+                            </coding>
+                        </role>
+                        <reference>
+                            <reference value="urn:uuid:06d0f0de-cf09-48b4-972f-1f93d597631b" />
+                        </reference>
+                    </actor>
+                    <purpose>
+                        <system value="http://hl7.org/fhir/v3/ActReason" />
+                        <code value="TREAT" />
+                    </purpose>
+                </provision>
+            </Consent>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Consent" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:4d4c0bb4-82f4-4160-9399-cdde6500baad" />
+        <resource>
+            <Patient>
+                <id value="4d4c0bb4-82f4-4160-9399-cdde6500baad" />
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
+                    <value value="87654321" />
+                </identifier>
+            </Patient>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Patient" />
+        </request>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:06d0f0de-cf09-48b4-972f-1f93d597631b" />
+        <resource>
+            <Organization>
+                <id value="06d0f0de-cf09-48b4-972f-1f93d597631b" />
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/ura" />
+                    <value value="12345678" />
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="http://nictiz.nl/fhir/NamingSystem/organization-type" />
+                        <version value="SOMEVERSION" />
+                        <code value="A1" />
+                    </coding>
+                </type>
+            </Organization>
+        </resource>
+        <request>
+            <method value="POST" />
+            <url value="Organization" />
+        </request>
+    </entry>
+</Bundle>
